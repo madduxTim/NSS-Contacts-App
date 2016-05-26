@@ -1,0 +1,1 @@
+{"/Users/timmaddux/workspace/front_end_milestones/rich-browser-applications/contacts-app/lib/gulpfile.js":{"sha1":"fc45a93d2d226499984cb60314312bae74bed24f","tasks":{"default":{"name":"default","dependencies":"watch lint sassify"},"watch":{"name":"watch","dependencies":""},"lint":{"name":"lint","dependencies":""},"sassify":{"name":"sassify","dependencies":""}}}}

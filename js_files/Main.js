@@ -1,6 +1,5 @@
 "use strict";
-var app = angular.module("ContactsApp", [])
-
+var Appy = angular.module("ContactsApp", []);
 
 // THIS IS FOR SPLITTING UP THE HTML INTO SEPERATE FILES. DO LAST. 
 
