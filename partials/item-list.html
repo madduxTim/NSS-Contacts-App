@@ -1,0 +1,24 @@
+<h1>Contacts List</h1>
+
+<!-- SEARCH BAR BOUND TO ELEMENTS IN THE CONTACTS LIST -->
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" ng-model="searchText">
+    </div>
+  </div>
+</div>
+
+<div ng-repeat="item in items | filter: searchText">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="col-xs-2"><a ng-href="#/items/{{item.id}}">{{item.name}}</a></div>
+      <div class="col-xs-2">{{item.title}}</div>
+      <div class="col-xs-2">{{item.organization}}</div>
+      <div class="col-xs-1">{{item.email}}</div>
+      <div class="col-xs-1">{{item.phone}}</div>
+      <div class="col-xs-3">{{item.address}}</div>
+      <div class="col-xs-1"><button class="btn btn-danger" ng-click="itemDelete(item.id)">X</button></div>
+    </div>
+  </div>
+</div>

@@ -1,14 +1,13 @@
 $bacon: lightblue;
-$red: red; 
 
 body {
     background-color: $bacon;
 }
 
-.main-container {
-    border: 2px dashed $red;
+.lightblue {
+    background-color: $bacon;
 }
 
-.search-bar-spacing {
-    margin-bottom: 20px;
+.main-container {
+    background-color: $bacon;
 }
