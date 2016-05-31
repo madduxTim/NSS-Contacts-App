@@ -11,8 +11,8 @@
     <!-- BASIC BOOTSTRAP NAV -->
     <div ng-include="'./partials/nav-bar.html'"></div>
 
-
-    <!-- I NEED TO ASK ABOUT THIS. NOT 100% CLEAR ON HOW IT'S WORKING -->
+    
+    <!-- NG-VIEW 'ROUTING' IS SET UP IN APP.JS -->
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1 main-container">
         <div class="col-xs-12" ng-view>
@@ -63,14 +63,24 @@
       </div>    
     </div> <!-- END OF MODAL -->
 
+    <!-- ORDER OF SCRIPTS SHOULD BE LIBRARIES, MAIN APP, ANYTHING WITH AUTH, THEN REST -->
     <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.4.2/firebase.js'></script>
+<!--     <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
+ -->    <script type="text/javascript" src="lib/node_modules/angularfire/dist/angularfire.js"></script>
+
     <script type="text/javascript" src="js_files/app.js"></script>
+
+    <script type="text/javascript" src="js_files/factories/AuthFactory.js"></script>
+    <script type="text/javascript" src="js_files/factories/Factory.js"></script>
+
+    <script type="text/javascript" src="js_files/controllers/LoginCtrl.js"></script>
     <script type="text/javascript" src="js_files/controllers/ListCtrl.js"></script>
     <script type="text/javascript" src="js_files/controllers/EditCtrl.js"></script>
     <script type="text/javascript" src="js_files/controllers/NewCtrl.js"></script>
-    <script type="text/javascript" src="js_files/factories/Factory.js"></script>
+    <script type="text/javascript" src="js_files/controllers/ViewCtrl.js"></script>
     </body>
 </html>
