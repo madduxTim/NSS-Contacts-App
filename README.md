@@ -17,7 +17,7 @@ Practice exercise as part of work with Nashville Software School. Learning to bu
 - Materialize CSS
 
 ##Screenshot
-![Finished product:](https://github.com/madduxTim/strings/blob/master/screenshots/Screen%20Shot%202016-03-31%20at%208.53.35%20AM.png)
+![Finished product:]()
 
 ## How to run: 
 ```

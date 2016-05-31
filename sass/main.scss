@@ -1,3 +1,18 @@
+$bacon: lightblue;
+
 body {
-    background-color: red;
+    background-color: $bacon;
 }
+
+.lightblue {
+    background-color: $bacon;
+}
+
+.main-container {
+    background-color: $bacon;
+}
+
+h1 {
+    text-align: center;
+}
+

@@ -1,5 +1,5 @@
     {
-    "predef": [ "document", "console", "jquery", "module", "require", "angular"],
+    "predef": [ "document", "app", "console", "jquery", "module", "require", "angular", "Firebase"],
     "esversion": 6,
     "globalstrict": true,
     "jquery": true
