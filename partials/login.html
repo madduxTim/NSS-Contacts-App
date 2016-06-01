@@ -1,5 +1,5 @@
 <!-- THIS TEMPLATE PARTIAL PAIRS WITH LoginCtrl.js controller -->
-<section>
+<section class="container">
     <h1>Login or Register</h1>
     <div>
         Email: <input type="text" autofocus="true" ng-model="account.email">
@@ -8,7 +8,7 @@
         Password: <input type="password" ng-model="account.password">
     </div>
     <div>
-        <button class="btn btn-info" ng-click="login()">Login</button>
-        <button class="btn btn-default" ng-click="register()">Register</button>
+        <button ng-click="login()">Login</button>
+        <button ng-click="register()">Register</button>
     </div>
 </section>

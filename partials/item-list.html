@@ -1,24 +1,36 @@
-<h1>Contacts List</h1>
+<!-- LIST OF ALL CONTACTS PAIRS WITH ListCtrl.js CONTROLLER -->
 
-<!-- SEARCH BAR BOUND TO ELEMENTS IN THE CONTACTS LIST -->
-<div class="row">
-  <div class="col-xs-6 col-xs-offset-3">
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" ng-model="searchText">
-    </div>
+<div id="allItemsView" class="row">
+
+  <!-- FILTER SIDEBAR -->
+  <div id="sideBar" class="col s12 m3 13">
+    <p>Here's some text</p>
   </div>
-</div>
+  
+  <!-- ALL CONTACTS LIST -->
+  <div id="allContactsList" class="col s12 m9 19">
 
-<div ng-repeat="item in items | filter: searchText">
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <div class="col-xs-2"><a ng-href="#/items/{{item.id}}">{{item.name}}</a></div>
-      <div class="col-xs-2">{{item.title}}</div>
-      <div class="col-xs-2">{{item.organization}}</div>
-      <div class="col-xs-1">{{item.email}}</div>
-      <div class="col-xs-1">{{item.phone}}</div>
-      <div class="col-xs-3">{{item.address}}</div>
-      <div class="col-xs-1"><button class="btn btn-danger" ng-click="itemDelete(item.id)">X</button></div>
+    <!-- SEARCH BAR -->
+    <div id="allItems" class="row">
+      <div class="col s6">
+        <div>
+            <input type="text" placeholder="Search" ng-model="searchText">
+        </div>
+      </div>
+    </div>
+
+    <!-- LIST OF FOLKS  -->
+    <div class="row" ng-repeat="item in items | filter: searchText">
+      <div class="divider"></div>
+      <div class="section">
+        <div class="col s2"><a ng-href="#/items/{{item.id}}">{{item.name}}</a></div>
+        <div class="col s2">{{item.title}}</div>
+        <div class="col s2">{{item.organization}}</div>
+        <div class="col s1">{{item.email}}</div>
+        <div class="col s1">{{item.phone}}</div>
+        <div class="col s3">{{item.address}}</div>
+        <div class="col s1"><button ng-click="itemDelete(item.id)">X</button></div>
+      </div>
     </div>
   </div>
 </div>

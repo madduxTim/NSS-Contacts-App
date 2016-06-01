@@ -1,11 +1,5 @@
-body {
+#allContactsList {
   background-color: lightblue; }
 
-.lightblue {
-  background-color: lightblue; }
-
-.main-container {
-  background-color: lightblue; }
-
-h1 {
-  text-align: center; }
+#sideBar {
+  background-color: gold; }

@@ -1,18 +1,12 @@
-$bacon: lightblue;
+$lightblue: lightblue;
+$gold: gold;
 
-body {
-    background-color: $bacon;
+
+#allContactsList {
+    background-color: $lightblue;
 }
 
-.lightblue {
-    background-color: $bacon;
-}
-
-.main-container {
-    background-color: $bacon;
-}
-
-h1 {
-    text-align: center;
+#sideBar {
+    background-color: $gold;
 }
 
