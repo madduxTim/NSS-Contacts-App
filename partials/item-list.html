@@ -3,34 +3,55 @@
 <div id="allItemsView" class="row">
 
   <!-- FILTER SIDEBAR -->
-  <div id="sideBar" class="col s12 m3 13">
-    <p>Here's some text</p>
+  <div id="sideBar" class="col s12 m3 13 flow-text">
+    <p>Go 'head, filter some stuff</p>
+    <input type="text" placeholder="Filter by Keyword" ng-model="searchText">
+    <input id="cbox1" type="checkbox"><label for="cbox1">Here's a filter</label><br>
+    <input id="cbox2" type="checkbox"><label for="cbox2">Here's a filter</label><br>
+    <input id="cbox3" type="checkbox"><label for="cbox3">Here's a filter</label><br>
+    <input id="cbox4" type="checkbox"><label for="cbox4">Here's a filter</label><br>
+    <input id="cbox5" type="checkbox"><label for="cbox5">Here's a filter</label><br>
   </div>
   
   <!-- ALL CONTACTS LIST -->
   <div id="allContactsList" class="col s12 m9 19">
+    <div class="card blue" ng-repeat="item in items | filter: searchText">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="../img/photo.png"> <!-- {{item.name}} --> 
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{item.name}}<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal blue-">
+        <span class="card-title grey-text text-darken-4">{{item.name}}<i class="material-icons right">close</i></span>
+          <div class="col s1">{{item.title}}</div>
+          <div class="col s1">{{item.organization}}</div>
+          <div class="col s3">{{item.email}}</div>
+          <div class="col s2">{{item.phone}}</div>
+          <div class="col s3">{{item.address}}</div>
+        <a href="#" ng-click="itemDelete(item.id)"><i class="material-icons right">edit</i></a>
+        <a href="#" ng-click="itemDelete(item.id)"><i class="material-icons right">delete</i></a>
+      </div>
+    </div>
 
-    <!-- SEARCH BAR -->
-    <div id="allItems" class="row">
-      <div class="col s6">
-        <div>
-            <input type="text" placeholder="Search" ng-model="searchText">
+    <div class="row" ng-repeat="item in items | filter: searchText">
+      <div class= col s12 m5 12>
+        <div class="card-panel blue z-depth-4">
+        <div class="section">
+          <div class="col s2"><a class="white" ng-href="#/items/{{item.id}}">{{item.name}}</a></div>
+          <div class="col s2">{{item.title}}</div>
+          <div class="col s2">{{item.organization}}</div>
+          <div class="col s1">{{item.email}}</div>
+          <div class="col s1">{{item.phone}}</div>
+          <div class="col s3">{{item.address}}</div>
+          <div class="col s1"><a href="#" class="btn" ng-click="itemDelete(item.id)"><i class="material-icons">delete</i></a></div>
+        </div>
         </div>
       </div>
     </div>
-
-    <!-- LIST OF FOLKS  -->
-    <div class="row" ng-repeat="item in items | filter: searchText">
-      <div class="divider"></div>
-      <div class="section">
-        <div class="col s2"><a ng-href="#/items/{{item.id}}">{{item.name}}</a></div>
-        <div class="col s2">{{item.title}}</div>
-        <div class="col s2">{{item.organization}}</div>
-        <div class="col s1">{{item.email}}</div>
-        <div class="col s1">{{item.phone}}</div>
-        <div class="col s3">{{item.address}}</div>
-        <div class="col s1"><button ng-click="itemDelete(item.id)">X</button></div>
-      </div>
-    </div>
+  <a ng-href="#/items/new" class="btn-floating btn-large waves-effect waves-light blue right"><i class="material-icons">perm_identity</i></a>
   </div>
+  
 </div>
+

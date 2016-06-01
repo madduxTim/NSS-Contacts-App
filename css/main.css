@@ -1,5 +1,14 @@
 #allContactsList {
-  background-color: lightblue; }
+  background-color: lightblue;
+  min-height: 550px; }
 
 #sideBar {
-  background-color: gold; }
+  background-color: gold;
+  min-height: 550px; }
+
+.bacon {
+  font-size: 50px; }
+
+img {
+  max-height: 100px;
+  max-width: 100px; }

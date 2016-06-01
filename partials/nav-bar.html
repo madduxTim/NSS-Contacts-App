@@ -1,6 +1,10 @@
-<nav ng-controller="ListCtrl"> 
-    <a href="#/items/list">Your Contacts!</a>
-    <a ng-href="#/items/new">New Item</a>
-    <a ng-href="#/items/list">All Items</a>
-    <a ng-href="#/logout">Logout</a>
+<nav class="lime lighten-2">
+    <div class="flow-text" ng-controller="ListCtrl"> 
+        <a href="#/items/list"><li class="material-icons">recent_actors</li>Your Contacts!</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="btn right" ng-href="#/logout">Logout</a></li>
+            <li><a class="btn right" ng-href="#/items/new">New Item</a></li>
+            <li><a class="btn right" ng-href="#/items/list">All Items</a></li>
+        </ul>
+    </div>
 </nav>
